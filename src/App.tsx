@@ -1,25 +1,14 @@
 import { useState } from "react";
+import Cwm_expandable from "./components/Cwm_expandable";
 
 function App() {
-  const [pizza, setPizza] = useState({
-    name: "Cheese Pizza",
-    toppings: ["Mushrooms"],
-  });
-
-  const handleClick = () => {
-    setPizza({
-      ...pizza,
-      toppings: [...pizza.toppings, "Cheese"],
-    });
-  };
-
   return (
     <>
-      <button onClick={handleClick}>Change pizza</button>
-      <h3>toppings</h3>
-      {pizza.toppings.forEach((topp) => {
-        console.log(topp);
-      })}
+      <Cwm_expandable maxCharacters={50}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt rem
+        odit quis quaerat. In dolorem praesentium velit ea esse consequuntur cum
+        fugit sequi voluptas ut possimus voluptatibus deserunt nisi eveniet!
+      </Cwm_expandable>
     </>
   );
 }
